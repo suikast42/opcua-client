@@ -1,0 +1,15 @@
+# ===================================================================
+# OpcUa properties
+# 配置OpcUa订阅节点需注意：
+# 1、同一类别对应于一个 onDataChange 处理事件
+# 2、同一设备出现多台，可参考下面格式书写配置，注意缩进，且必须写在类别的最前面，
+#    其中NodeBase 为所有节点的共有部分，No为设备编号，SubsribeNode 为节点的变量名，No可以不写
+# 3、也可以单独配置单一节点
+# ===================================================================
+opcua:
+    address: opc.tcp://localhost:52520/OPCUA/SampleConsoleServer
+    automationLineRobotStatusSubscribeNodes:
+          - NodeBase# AutomationLine.AutomationLineRobotStatus
+            - SubsribeNode# 001robotStatus,002robotStatus,
+#              003robotStatus, 004robotStatus, 005robotStatus, 006robotStatus,
+#                              007robotStatus, 008robotStatus, 009robotStatus, 010robotStatus, 011robotStatus, 012robotStatus,

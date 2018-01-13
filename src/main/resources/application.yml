@@ -1,0 +1,15 @@
+
+# ===================================================================
+# OpcUa properties
+# ===================================================================
+opcua:
+    address: opc.tcp://127.0.0.1:52520/OPCUA/MideaOPCUAServer
+    retry:
+        connBackOffPeriod: 10000
+        maxAttempts: 3
+        backOffPeriod: 1000
+    publishingRate: 100
+spring:
+  profiles:
+    active: dev
+
